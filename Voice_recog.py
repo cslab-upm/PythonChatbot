@@ -11,6 +11,12 @@ import os #to delete files
 #standard answers:
 #dont understand,
 #repeat
+#help me
+#options
+
+#Get response after 3 or 4 seconds.
+
+
 #connect with the API, application programming interface
 #Get sound
 #Noelia, upload the code.
@@ -34,7 +40,6 @@ def Get_duration(fname):
             #print (duration)
             return duration
     return None
-#import os
 language = "en"
 i = 0
 j = 0
@@ -71,7 +76,7 @@ def Speak(sentence):
 #     if i == j:
 #         j+=1
 #    savename = sentence[:3] + str(j) + ".mp3"
-    savename = "speak.mp3"
+    savename = "Sounds/speak.mp3"
     myobj.save(savename)
     duration = Get_duration(savename)
 #     testing speed
@@ -85,7 +90,7 @@ def Speak(sentence):
     time.sleep(duration)
     time.sleep(0.1)
     mixer.music.stop()
-    mixer.music.load("dontremove.mp3") #(Dummy)otherwise I cannot remove the .mp3 files
+    mixer.music.load("Sounds/dontremove.mp3") #(Dummy)otherwise I cannot remove the .mp3 files
     mixer.quit()
     os.remove(savename)
     
@@ -93,8 +98,8 @@ def Speak(sentence):
 def Recognize_speech(r,mic):
     with mic as source:
         r.adjust_for_ambient_noise(source)
+        Play("Sounds/Bleep.wav") #bleep sound
         print("speak now")
-        Play("Bleep.wav") #bleep sound
         audio = r.listen(source)
     # set up the response object
     response = {
@@ -201,7 +206,7 @@ def Introduction():
     message3 = random.choice(messages3)
     Speak(message3)
     time.sleep(0.5)
-    Play("meteor1_underdense.wav")
+    Play("Sounds/meteor1_underdense.wav")
     
     #SECOND SOUND
     messages4 = ["The second sound is the M meteor",
@@ -209,7 +214,7 @@ def Introduction():
     message4 = random.choice(messages4)
     Speak(message4)
     time.sleep(0.5)
-    Play("meteor2_M.wav")
+    Play("Sounds/meteor2_M.wav")
     
     #THIRD SOUND
     messages5 = ["The third sound is the long overdense meteor",
@@ -217,7 +222,7 @@ def Introduction():
     message5 = random.choice(messages5)
     Speak(message5)
     time.sleep(0.5)
-    Play("meteor3_long overdense.wav")
+    Play("Sounds/meteor3_long overdense.wav")
     
     #FOURTH SOUND
     messages6 = ["The fourth sound is the medium overdense meteor",
@@ -225,7 +230,7 @@ def Introduction():
     message6 = random.choice(messages6)
     Speak(message6)
     time.sleep(0.5)
-    Play("meteor4_medium overdense.wav")
+    Play("Sounds/meteor4_medium overdense.wav")
     
     #FIFTH SOUND
     messages7 = ["And the fifth sound is the short overdense meteor",
@@ -233,7 +238,7 @@ def Introduction():
     message7 = random.choice(messages7)
     Speak(message7)
     time.sleep(0.5)
-    Play("meteor5_short overdense.wav")
+    Play("Sounds/meteor5_short overdense.wav")
     
     #What to do now?
     messages8 = ["Would you like to repeat, practice or continue to classify the sounds?",
