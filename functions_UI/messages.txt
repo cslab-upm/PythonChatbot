@@ -1,0 +1,94 @@
+Description: "All program text messages"
+Title: "program text messages"
+Author: "Jeroen van den Berg"
+
+#classifysounds
+allsounds: "sound1.wav";"sound2.wav";"sound3.wav";"sound4.wav";"sound5.wav";"sound6.wav";"sound7.wav";"sound8.wav";"sound9.wav";"sound10.wav";"sound11.wav";"sound12.wav";"sound13.wav";"sound14.wav";"sound15.wav";"sound16.wav";"sound17.wav";"sound18.wav";"sound19.wav";"sound20.wav"
+
+#welcome
+welcome1: 'Welcome to the program for classifying meteor sounds'; 'Program has started'; 'I like that you started the program'
+welcome2: 'If you hear this sound:';  "when you hear this sound"
+welcome3: 'you can speak'; 'I expect you to say something';'you can say something'
+welcome4: 'Would you like to get an introduction or would you like to do some practice?'; 'Do you want to learn the sounds with the introduction or with some practice?';'Would you like to hear the sound examples or do the pactice?'
+
+#introduction
+intro1: "Perfect. Now you'll get an introduction"; 'Lovely. You will now learn how to classify the sounds';'Great. We are now in the introduction part'
+intro2: "There are 5 different types of meteors: Underdense meteor.., M meteor.., long overdense meteor, medium overdense meteor. And the short overdense meteor"; 'Meteors are classified into 5 different types, which are: Underdense meteor, M meteor, long overdense meteor, medium overdense meteor. And the short overdense meteor')
+intro3: "The first sound is the underdense meteor"; "The underdense meteor sounds like this"
+intro4: "The second sound is the short overdense meteor"; "The short overdense meteor sounds like this"
+intro5: "The third sound is the M meteor"; "The M meteor sounds like this"
+intro6: "The fourth sound is the medium overdense meteor";"The medium overdense meteor sounds like this"
+intro7: "And the fifth sound is the long overdense meteor";"And the long overdense meteor sounds like this"
+intro8: "Would you like to repeat, practice or continue to classify the sounds?"; "Did you get everything? What would you like to do now?"
+
+#practice_level
+practice1: "After you hear the sound, you can choose between the {} meteor, you should call this number {}... and the {} meteor, you should call this number {}."; "You have to coose between the {} meteor, which is number {}... and the {} meteor, which is number {}... After the sound, you should say a number."
+practice2: "That was not a possible answer, try again"; "This answer is not possible, you can try again."
+practice3: "I didn't understand, try it again.";
+practice4: "Your answer is correct";"That is correct";"You gave the correct answer"
+practice5: "Your answer was wrong. You chose {} meteor, which is number {}. That sound like this:..";"You chose the wrong answer. The {} meteor... number {} ... sounds like this:.."
+practice6: "The correct answer was {} meteor, which is number {}. That sounds like this:..";"The meteor you were supposed to say is the {} meteor... number {}... and sounds like this:.."
+practice7: "Try another time"; "Try it again"
+practice8: "Let's continue";"Maybe we can do another level"
+practice9: "After you hear the sound, you can choose between the {} meteor, you should call this number {}... the {} meteor, you should call this number {}... and the {} you should call this number {}."
+practice10: "After you hear the sound, you can choose between the {} meteor, you should call this number {}... the {} meteor, you should call this number {}... the {} you should call this number {} and the {} you should call this {}."
+practice11: "After you hear the sound, you can choose between all the meteors. You should call them 1,2,3,4 or 5"
+practice12: "We are now in practice";"Now we are going to practice"
+practice13: "There are 8 levels of practice.";"You have the option of 8 different levels."
+
+#classification
+class1: "We are going to classify some meteor sounds";"We are in the main part to classify some meteor sounds"
+class2: "You can choose between the five meteors, and can also say it belongs to an other category or that you don't know the answer";"You can choose one of the five types of meteors... You can also say that you don't know the answer or that it belongs to an ... other ... category"
+class3: "Are you ready?"; "Can we start?"
+class4: "You chose number {} which is the {} meteor, is that correct?"; "Did you say number {}, which is the {} meteor?"; "Is it correct that you said number {}, the {} meteor?"
+class5: "Here comes the sound"; "Now you will hear the sound" ; "Here is the sound"
+class6: "Do you want to classify another sound?";"Would you like to hear another meteor sound?";"Shall we do an other one?"
+class7: "You chose.. 'other'.., is it correct that you cannot classify it in the five categories?"; "You chose.. 'other' this means that you cannot classify it into one of the five categories, is that correct?"
+class8: "You didn't know, therefore we give you another sound";"You can't know every sound, right? We give you another sound";"You didn't know the answer, therefore we give you another sound"
+class9: "I didn't understand. I'm playing the sound again for you"; "My bad, I'm still learning, but I couldn't hear an answer I could use. We'll play the sound again";"Are you sure you said a number? I didn't understand so we play the sound again"
+
+#function listen_level
+function1: "Which level do you want to do?";"which level shall we do?";"Give me the level number so we can practice"
+
+#answers
+#introductionanswers
+answer1: "practice";  "exercise"; "training"
+answer2: "repeat"; "again"
+answer3: "continue"; "classify"
+
+#functionlistenlevelanswers
+answer4: "one";"first";"1";"One"
+answer5: "two";"second";"2";"too";"to";"Two"
+answer6: "three";"third";"3";"tree";"tri";"free"
+answer7: "four";"fourth";"4"
+answer8: "five";"fifth";"5"
+answer9: "six";"sixth";"6"
+answer10: "seven";"seventh";"7"
+answer11: "eight";"eighth";"8"
+answer12: "quit";"skip";"stop";"classify"
+
+#Welcomeanswers
+answer13: "introduction";"examples";"yes";"please";"yeah"
+answer14: "no"; "thank"; "thanks"
+answer15: "practice";"exercise";"breakfast"
+answer16: "repeat"; "again"
+answer17: "help"
+answer18: "option"; "options"
+answer19: "menu"
+
+#classificationanswers
+answer20: "other";"another";"different"
+answer21: "not";"don't"
+answer22: "yes";"sure";"yeah";"ofcourse";"Yes";"start";"ready"
+answer23: "No";"no";"abort";"exit"
+answer24: "correct";"Correct";"yes";"Yes";"sure"
+answer25: "Yes";"yes";"next";"another";"other";"continue"
+
+#debug
+debug1: "You said: '{}'. I can't do anything with this answer"
+
+#help
+Help_messages1: 'You are now in the help menu.';"I'll help you now!"; "What can I do for you?"
+Help_messages2: "What do you want? You can change the volume or the speed.";  "Would you like to change the volume or would you like to change the speed?"
+
+end: stop

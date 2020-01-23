@@ -2,30 +2,20 @@ import random
 from functions import *
 
 def Introduction(r,mic):
-    messages1 = ["Perfect. Now you'll get an introduction",
-                'Lovely. You will now learn how to classify the sounds',
-                'Great. We are now in the introduction part']
-    
-    messages2 = ["There are 5 different types of meteors: Underdense meteor.., M meteor.., long overdense meteor.., medium overdense meteor... And the short overdense meteor",
-                'Meteors are classified into 5 different types, which are: Underdense meteor.., M meteor.., long overdense meteor.., medium overdense meteor... And the short overdense meteor']
+    messages1 = Message_Tag(Messages,"intro1")
+    messages2 = Message_Tag(Messages,"intro2")
     #FIRST SOUND
-    messages3 = ["The first sound is the underdense meteor, which also will be called meteor one.",
-                "The underdense meteor, which also will be called meteor one, sounds like this:"]
+    messages3 = Message_Tag(Messages,"intro3")
     #SECOND SOUND
-    messages4 = ["The second sound is the M meteor also called meteor 2",
-                "The M meteor or meteor 2 sounds like this:"]
+    messages4 = Message_Tag(Messages,"intro4")
     #THIRD SOUND
-    messages5 = ["The third sound is the long overdense meteor also called meteor 3",
-                "The long overdense meteor or meteor 3 sounds like this:"]
+    messages5 = Message_Tag(Messages,"intro5")
     #FOURTH SOUND
-    messages6 = ["The fourth sound is the medium overdense meteor also called meteor 4",
-                "The medium overdense meteor or meteor 4 sounds like this:"]
+    messages6 = Message_Tag(Messages,"intro6")
     #FIFTH SOUND
-    messages7 = ["And the fifth sound is the short overdense meteor also called meteor 5",
-                "And the short overdense meteor sounds like this:"]
+    messages7 = Message_Tag(Messages,"intro7")
     #What to do now?
-    messages8 = ["Would you like to repeat, practice or continue to classify the sounds?",
-                 "Did you get everything? Would you like to repeat, practice or classify the sounds?"]
+    messages8 = Message_Tag(Messages,"intro8")
     
     message1 = random.choice(messages1)
     message2 = random.choice(messages2)
@@ -41,34 +31,28 @@ def Introduction(r,mic):
     Speak(message2)
     Speak(message3)
     Play("underdense")
-    Speak(message7)
-    Play("short overdense")
     Speak(message4)
+    Play("short overdense")
+    Speak(message5)
     Play("M")
     Speak(message6)
     Play("medium overdense")
-    Speak(message5)
+    Speak(message7)
     Play("long overdense")
     Speak(message8)
     
     text = listen(r,mic)
     words = text.split()
     #options: R(repeat),P(practice) and C(continue)
+        
+    Panswers = Message_Tag(Messages,"answer1")
+    P = check_words_set(Panswers,words)
     
+    Ranswers = Message_Tag(Messages,"answer2")
+    R = check_words_set(Ranswers,words)
     
-    
-    Panswer = "practice"
-    Panswer2 = "exercise"
-    P = check_words(Panswer,Panswer2,None,words)
-    
-    Ranswer = "repeat"
-    Ranswer2 = "again"
-    Ranswer3 = "time" #one more time
-    R = check_words(Ranswer,Ranswer2,Ranswer3,words)
-    
-    Canswer = "continue"
-    Canswer2 = "classify"
-    C = check_words(Canswer,Canswer2,None,words)
+    Canswers = Message_Tag(Messages,"answer3")
+    C = check_words_set(Canswers,words)
     
     
     if P:
@@ -78,6 +62,8 @@ def Introduction(r,mic):
     elif C:
         goto = "classify"
     else:
-        Speak("You said: '{}'. I can't do anything with this answer.".format(text))
+        messages9 = Message_Tag(Messages,"debug1")
+        message9 = random.choice(messages9)
+        Speak(message9.format(text))
         goto = text
     return goto
